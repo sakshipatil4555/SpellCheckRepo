@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Spell Check Results</title></head>
+<body>
+    <h2>Misspelled Words</h2>
+    <ul>
+        {% for word, suggestions in misspellings.items() %}
+        <li><strong>{{ word }}</strong> → Suggestions: {{ suggestions }}</li>
+        {% endfor %}
+    </ul>
+    <hr>
+    <h3>Extracted Text:</h3>
+    <pre>{{ extracted }}</pre>
+    <a href="/">Go Back</a>
+</body>
+</html>
